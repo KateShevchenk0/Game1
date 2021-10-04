@@ -1,0 +1,29 @@
+# Game1
+import java.util.Scanner;
+import java.util.Random;
+
+    public class GameOne{
+
+    public static void main(String []args){
+    System.out.println("Привіт! Давай пограємо в гру) Я загадав число від 0 до 100, спробуй його вгадати) Удачі!");
+
+      Random random = new Random();
+      int randomValue = random.nextInt(100);
+      System.out.println("Введіть будь-яке ціле число від 1 до 100: ");
+
+  while (true) {
+
+  Scanner scan = new Scanner (System.in);
+  int number = scan.nextInt();
+
+  if(randomValue < number) {
+    System.out.println("Загадане число менше(");
+    }  else if(randomValue > number) {
+    System.out.println("Загадане число більше(");
+    } else {
+    System.out.println("Вітаю! Ти вгадав!)");
+    break;
+   }
+  } 
+ }
+}
